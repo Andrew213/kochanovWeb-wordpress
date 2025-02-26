@@ -219,6 +219,8 @@
 
             wp_reset_postdata(); // сброс
         ?>
+
+  
       </ul>
 
       <button type="button" class="button projects__btn">
