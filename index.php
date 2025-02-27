@@ -52,11 +52,12 @@
     type="font/woff2"
     crossorigin
   /> -->
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php 
   wp_head();
 ?>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body class="bod">
@@ -95,7 +96,7 @@
           </div>
         </div>
       </header>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero__inner container">
           <div class="hero__me">
             <div class="hero__me_left">
@@ -165,7 +166,7 @@
       <svg class="testSvg">
         <path id="dynamicCurve-js" fill="none" stroke-width=" 2" />
       </svg>
-      <section class="projects " data-scroll data-scroll-speed="2">
+      <section class="projects" id="projects" data-scroll data-scroll-speed="2">
         <div class="projects__inner inner ">
           <h2 class="title projects__title" id="projects">Проекты</h2>
           <div class="projects_listContainer">
@@ -173,21 +174,21 @@
 
             <ul class="projects__list">
               <?php
-            // параметры по умолчанию
-            $my_posts = get_posts( array(
-            	'numberposts' => -1,
-            	'category_name'    => 'slider_projects',
-            	'orderby'     => 'date',
-            	'order'       => 'ASC',
-            	'post_type'   => 'post',
-            	'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-            ) );
-            
-            global $post;
-            
-            foreach( $my_posts as $post ){
-            	setup_postdata( $post );
-            ?>
+              // параметры по умолчанию
+              $my_posts = get_posts( array(
+                'numberposts' => -1,
+                'category_name'    => 'slider_projects',
+                'orderby'     => 'date',
+                'order'       => 'ASC',
+                'post_type'   => 'post',
+                'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+              ) );
+              
+              global $post;
+              
+              foreach( $my_posts as $post ){
+                setup_postdata( $post );
+              ?>
               <li class="projects__item">
                 <article class="projects__project">
                   <img class="projects__img" src="<?php echo the_field('project_img'); ?>" />
@@ -199,259 +200,40 @@
                   <a href="<?php the_field(" project_git") ?>" target="_blank" class="projects__link">link to code</a>
                   <p class="projects__about">
                     <?php 
-                the_field('project_desc') 
-            ?>
+                  the_field('project_desc') 
+              ?>
                     <!-- Классный проект с использованием TypeScript, ViteJS, EventBust для
-              управления событиями, WebSocket для обмена сообщениями. Плюс за
-              кастомный роутинг на TypeScript и тестирование с помощью Chai и
-              Mocha. -->
+                управления событиями, WebSocket для обмена сообщениями. Плюс за
+                кастомный роутинг на TypeScript и тестирование с помощью Chai и
+                Mocha. -->
                   </p>
                   <div class="projects__tags">
                     <?php 
-            $tags_string = get_field('project_tags');
-            if($tags_string){
-                $tags = explode(',', $tags_string);
-                foreach($tags as $tag){
-                    $tag = trim($tag);
-                    if (!empty($tag)){
-                       echo "<span class='projects__tag'>".$tag."</span>";
-                    }
-                }
-            }
-                
-            ?>
+              $tags_string = get_field('project_tags');
+              if($tags_string){
+                  $tags = explode(',', $tags_string);
+                  foreach($tags as $tag){
+                      $tag = trim($tag);
+                      if (!empty($tag)){
+                         echo "<span class='projects__tag'>".$tag."</span>";
+                      }
+                  }
+              }
+                  
+              ?>
                     <!-- <span class="projects__tag">REACT</span>
-              <span class="projects__tag">TypeScript</span>
-              <span class="projects__tag">WEBSOCKET</span>
-              <span class="projects__tag">AXIOS</span> -->
+                <span class="projects__tag">TypeScript</span>
+                <span class="projects__tag">WEBSOCKET</span>
+                <span class="projects__tag">AXIOS</span> -->
                   </div>
                 </article>
               </li>
               <?php
-            	// формат вывода the_title() ...
-            }
-
-            wp_reset_postdata(); // сброс
-        ?>
-
-              <li class="projects__item">
-                <article class=" projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/Salute.jpg" />
-                  <p class="projects__name">Ola messenger</p>
-                  <a href="https://loquacious-ganache-815e33.netlify.app/" target="_blank" class="projects__link">link
-                    to
-                    site</a>
-                  <a href="https://github.com/Andrew213/Messenger" target="_blank" class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    Классный проект с использованием TypeScript, ViteJS, EventBust для
-                    управления событиями, WebSocket для обмена сообщениями. Плюс за
-                    кастомный роутинг на TypeScript и тестирование с помощью Chai и
-                    Mocha.
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">REACT</span>
-                    <span class="projects__tag">TypeScript</span>
-                    <span class="projects__tag">WEBSOCKET</span>
-                    <span class="projects__tag">AXIOS</span>
-                  </div>
-                </article>
-              </li>
-
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/Tetris.jpg" />
-                  <p class="projects__name">Tetris game</p>
-                  <a href="https://main--magenta-faloodeh-392f7f.netlify.app/login" target="_blank"
-                    class="projects__link">link to site</a>
-                  <a href="https://github.com/Andrew213/tetra-tetris" target="_blank" class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    Интересный проект для командной работы. Работа с SSR, React,
-                    Canvas API, использование Vite и TypeScript, аутентификация,
-                    интеграция с Yandex API и управление состоянием через Redux
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">REACT</span>
-                    <span class="projects__tag">TS</span>
-                    <span class="projects__tag">REDUX</span>
-                    <span class="projects__tag">CANVAS</span>
-                    <span class="projects__tag">SSR</span>
-                  </div>
-                </article>
-              </li>
-
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/hhbot.png" />
-                  <p class="projects__name">HHbot</p>
-                  <a href="https://hhbot.netlify.app/" target="_blank" class="projects__link">link to site</a>
-                  <a href="https://github.com/Andrew213/HHbot" target="_blank" class="projects__link">link to code</a>
-                  <p class="projects__about">
-                    Приложение автоматизирует процесс отклика на вакансии на
-                    HeadHunter с сопроводительными письмами. Это удобный и эффективный
-                    инструмент для поиска работы, облегчающий отправку резюме на
-                    подходящие вакансии, использующее React, Node.js, Express и API
-                    HeadHunter
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">React</span>
-                    <span class="projects__tag">Express</span>
-                    <span class="projects__tag">MUI</span>
-                    <span class="projects__tag">NodeJs</span>
-                    <span class="projects__tag">HHapi</span>
-                  </div>
-                </article>
-              </li>
-
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/lt.webp" />
-                  <p class="projects__name">Little tail</p>
-                  <a href="https://effulgent-praline-98eb7c.netlify.app/" target="_blank" class="projects__link">link to
-                    site</a>
-                  <a href="https://github.com/Andrew213/Little_Tail_acid_test" target="_blank"
-                    class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    приложение на React с применением TypeScript, Ant Design для UI,
-                    работа с Redux для управления состоянием, Node.js и Express для
-                    бэкенда, а также MongoDB и Mongoose для базы данных и JWT для
-                    аутентификации.
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">React</span>
-                    <span class="projects__tag">Express</span>
-                    <span class="projects__tag">MongoDb</span>
-                    <span class="projects__tag">NodeJs</span>
-                    <span class="projects__tag">Redux</span>
-                  </div>
-                </article>
-              </li>
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/Blanchard.jpg" />
-                  <p class="projects__name">Blanchard gallery</p>
-                  <a href="http://blanchard-gallery.webtm.ru/" target="_blank" class="projects__link">link to site</a>
-                  <a href="https://github.com/Andrew213/Blanchard" target="_blank" class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    работа с вёрсткой: HTML 5, Sass, Gulp, адаптивность,
-                    кроссбраузерность, и использование различных npm пакетов для
-                    улучшения функционала и стилизации.
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">HTML</span>
-                    <span class="projects__tag">SASS</span>
-                    <span class="projects__tag">GULP</span>
-                    <span class="projects__tag">JS</span>
-                    <span class="projects__tag">BEM</span>
-                  </div>
-                </article>
-              </li>
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/gta.jpg" />
-                  <p class="projects__name">Pairs game</p>
-                  <a href="http://groove4life.tmweb.ru/" target="_blank" class="projects__link">link to site</a>
-                  <a href="https://github.com/Andrew213/game-pair_" target="_blank" class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    Простая и креативная игра на JavaScript с асинхронным кодом для
-                    управления данными и игровым процессом.
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">HTML</span>
-                    <span class="projects__tag">KEYFRAMES</span>
-                    <span class="projects__tag">JS</span>
-                    <span class="projects__tag">CSS</span>
-                  </div>
-                </article>
-              </li>
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/MartPlace.jpg" />
-                  <p class="projects__name">MartPlace</p>
-                  <a href="http://market-place.tmweb.ru/" target="_blank" class="projects__link">link to site</a>
-                  <a href="https://github.com/Andrew213/marketplace" target="_blank" class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    Чистая десктоп верстка первого экрана магазина
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">SCSS</span>
-                    <span class="projects__tag">JS</span>
-                    <span class="projects__tag">HTML</span>
-                    <span class="projects__tag">GULP</span>
-                  </div>
-                </article>
-              </li>
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/lendings.jpg" />
-                  <p class="projects__name">2 landings</p>
-                  <span style="display: flex; gap: 20px">
-                    <a href="http://hotels-landing.tmweb.ru/" target="_blank" class="projects__link">Hotels landing</a>
-                    <a href="https://github.com/Andrew213/Hotel_landing" target="_blank" class="projects__link">link to
-                      code</a>
-                  </span>
-                  <span style="display: flex; gap: 20px">
-                    <a href="https://ewklug.tmweb.ru/" target="_blank" class="projects__link">Ewklid landing</a>
-                    <a href="https://github.com/Andrew213/Ewklug-project" target="_blank" class="projects__link">link to
-                      code</a>
-                  </span>
-                  <p class="projects__about">
-                    Два примера вёрстки лендингов с использованием различных
-                    технологий и npm пакетов, акцент на адаптивности и качественной
-                    визуализации.
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">HTML</span>
-                    <span class="projects__tag">CSS</span>
-                    <span class="projects__tag">GULP</span>
-                  </div>
-                </article>
-              </li>
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/Currency.jpg" />
-                  <p class="projects__name">Currency convertor</p>
-                  <a href="http://exchangetest.webtm.ru/" target="_blank" class="projects__link">link to site</a>
-                  <a href="https://github.com/Andrew213/CurrencyConverter" target="_blank" class="projects__link">link
-                    to
-                    code</a>
-                  <p class="projects__about">
-                    Проект с использованием Redux и React для управления состоянием и
-                    UI, API для конвертации валют, и Ant Design для стилизации.
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">REACT</span>
-                    <span class="projects__tag">REDUX</span>
-                    <span class="projects__tag">TS</span>
-                    <span class="projects__tag">Effector</span>
-                  </div>
-                </article>
-              </li>
-              <li class="projects__item">
-                <article class="projects__project">
-                  <img class="projects__img" src="<?php echo bloginfo('template_url'); ?>/assets/rpg.jpg" />
-                  <p class="projects__name">RPG Skills</p>
-                  <a href="https://main--helpful-cucurucho-3e702f.netlify.app/" target="_blank"
-                    class="projects__link">link to
-                    site</a>
-                  <a href="https://github.com/Andrew213/RPG-test" target="_blank" class="projects__link">link to
-                    code</a>
-                  <p class="projects__about">
-                    Тестовая логика прокачки персонажа в рпг игре
-                  </p>
-                  <div class="projects__tags">
-                    <span class="projects__tag">REACT</span>
-                    <span class="projects__tag">REDUX</span>
-                    <span class="projects__tag">TS</span>
-                    <span class="projects__tag">SCSS</span>
-                  </div>
-                </article>
-              </li>
+                // формат вывода the_title() ...
+              }
+  
+              wp_reset_postdata(); // сброс
+          ?>
             </ul>
 
             <button type="button" class="button projects__btn">
@@ -579,7 +361,8 @@
       <svg class="testSvg">
         <path id="dynamicCurve-html" fill="none" stroke-width="2" />
       </svg>
-      <section class="tools" id="tools" data-scroll data-scroll-speed="3">
+
+      <section class="tools" id="tools" data-scroll data-scroll-speed="4">
         <div class="tools__inner inner container">
           <h2 class="title tools__title">Технологии</h2>
           <ul class="tools__list">
@@ -610,7 +393,7 @@
           </ul>
         </div>
       </section>
-      <section class="contacts" id="contacts" id="tools" data-scroll data-scroll-speed="3">
+      <section class="contacts" id="contacts" id="tools" data-scroll data-scroll-speed="5">
         <div class="contacts__inner inner container">
           <h2 class="title contacts__title">Контакты</h2>
 
@@ -678,19 +461,19 @@
           <nav class="footer__nav">
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="#hero" style="display: block" class="footer__button">Обо мне</a>
+                <a data-scroll-to="hero" style="display: block" class="footer__button footer_link">Обо мне</a>
               </li>
               <li class="footer__item">
-                <a style="display: block" href="#works" class="footer__button">Работы</a>
+                <a data-scroll-to="projects" style="display: block" class="footer__button footer_link">Работы</a>
               </li>
               <li class="footer__item">
-                <a style="display: block" href="#skills" class="footer__button">Навыки</a>
+                <a data-scroll-to="skills" style="display: block" class="footer__button footer_link">Навыки</a>
               </li>
               <li class="footer__item">
-                <a style="display: block" href="#tools" class="footer__button">Технологии</a>
+                <a data-scroll-to="tools" style="display: block" class="footer__button footer_link">Технологии</a>
               </li>
               <li class="footer__item">
-                <a style="display: block" href="#contacts" class="footer__button">Контакты</a>
+                <a data-scroll-to="contacts" style="display: block" class="footer__button footer_link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -705,26 +488,23 @@
           <nav class="footer__nav-sm">
             <ul class="footer__list-sm">
               <li class="footer__item-sm">
-                <a href="#projects" class="footer__button-sm footer__buttonWorks">
-                  Работы
-                </a>
+                <a data-scroll-to="hero" class="footer__button-sm footer_link">Обо мне</a>
               </li>
               <li class="footer__item-sm">
-                <a class="footer__button-sm">Обо мне</a>
+                <a data-scroll-to="projects" class="footer__button-sm footer_link">Работы</a>
               </li>
               <li class="footer__item-sm">
-                <a href="#skills" class="footer__button-sm">Навыки</a>
+                <a data-scroll-to="skills" class="footer__button-sm footer_link">Навыки</a>
               </li>
               <li class="footer__item-sm">
-                <a href="#tools" class="footer__button-sm">Технологии</a>
+                <a data-scroll-to="tools" class="footer__button-sm footer_link">Технологии</a>
               </li>
               <li class="footer__item-sm">
-                <a href="#contacts" class="footer__button-sm">Контакты</a>
+                <a data-scroll-to="contacts" class="footer__button-sm footer_link">Контакты</a>
               </li>
               <li class="footer__item-sm">
-                <a href="mailto:a.kochanov31@yandex.ru" class="contacts__mail footer__mail">Связаться</a>
+                <a href="mailto:a.kochanov31@yandex.ru" class="contacts__mail footer__mail footer_link">Связаться</a>
               </li>
-              <li class="footer__item-sm"></li>
             </ul>
           </nav>
         </div>
