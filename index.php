@@ -197,7 +197,10 @@
                   </p>
                   <a href="<?php the_field(" project_prod") ?>" target="_blank" class="projects__link">link to
                     site</a>
-                  <a href="<?php the_field(" project_git") ?>" target="_blank" class="projects__link">link to code</a>
+                    <?php
+                      if( get_field("project_git") ): ?>
+                        <a href="<?php the_field("project_git") ?>" target="_blank" class="projects__link">link to code</a>
+                      <?php endif; ?>
                   <p class="projects__about">
                     <?php 
                   the_field('project_desc') 
