@@ -6,6 +6,16 @@
   <meta charset="UTF-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="format-detection" content="address=no" />
+  <meta property="og:site_name" content="Веб-разработчик Андрей Кочанов"/>
+  <meta property="og:image" content="https://kochanov-web.tech/wp-content/uploads/my_site.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:url" content="https://kochanov-web.tech" />
+  <meta property="og:title" content="Андрей Кочанов" />
+  <meta property="og:description" content="Сайт или веб приложения для Вас или Вашего бизнеса!"/>
+  <meta property="og:site_name" content="Веб-разработчик Андрей Кочанов. Сайт под ключ любой сложности! "/>
   <link rel="shortcut icon" href="<?php echo bloginfo('template_url'); ?>/assets/favicon.ico" type="image/x-icon" />
   <link rel="preload" href="../fonts/Comfortaa-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../fonts/Comfortaa-Regular.woff2" as="font" type="font/woff2" crossorigin />
