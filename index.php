@@ -224,24 +224,26 @@
               }
                   
               ?>
-                    <!-- <span class="projects__tag">REACT</span>
-                <span class="projects__tag">TypeScript</span>
-                <span class="projects__tag">WEBSOCKET</span>
-                <span class="projects__tag">AXIOS</span> -->
+
                   </div>
                 </article>
               </li>
               <?php
-                // формат вывода the_title() ...
               }
-  
               wp_reset_postdata(); // сброс
           ?>
             </ul>
 
-            <button type="button" class="button projects__btn">
-              <div class="button-hire__text">Раскрыть список</div>
-            </button>
+            <?php
+              // Условие для отображения кнопки
+              if (count($my_posts) > 3) {
+                ?>
+                <button type="button" class="button projects__btn">
+                  <div class="button-hire__text">Раскрыть список</div>
+                </button>
+                <?php
+              }
+            ?>
           </div>
         </div>
       </section>
