@@ -205,7 +205,7 @@
                   <p class="projects__name">
                     <?php the_title() ?>
                   </p>
-                  <a href="<?php the_field(" project_prod") ?>" target="_blank" class="projects__link">link to
+                  <a href="<?php the_field("project_prod") ?>" target="_blank" class="projects__link">link to
                     site</a>
                     <?php
                       if( get_field("project_git") ): ?>
