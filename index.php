@@ -20,6 +20,10 @@
   <link rel="preload" href="../fonts/Comfortaa-Bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../fonts/Comfortaa-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../fonts/Comfortaa-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
   <!-- <link
     rel="preload"
     href="fonts/Syne-Bold.woff2"
@@ -217,8 +221,8 @@
                   <div class="projects__about">
                     <?php 
                   the_field('project_desc') 
-              ?>
-                  </в>
+                  ?>
+                  </div>
                   <div class="projects__tags">
                     <?php 
               $tags_string = get_field('project_tags');
@@ -530,6 +534,7 @@
   <?php 
   wp_footer()
 ?>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
