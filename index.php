@@ -205,21 +205,20 @@
                   <p class="projects__name">
                     <?php the_title() ?>
                   </p>
+                  <?php 
+                  if( get_field("project_prod") ): ?>
                   <a href="<?php the_field("project_prod") ?>" target="_blank" class="projects__link">link to
                     site</a>
+                    <?php endif; ?>
                     <?php
                       if( get_field("project_git") ): ?>
                         <a href="<?php the_field("project_git") ?>" target="_blank" class="projects__link">link to code</a>
                       <?php endif; ?>
-                  <p class="projects__about">
+                  <div class="projects__about">
                     <?php 
                   the_field('project_desc') 
               ?>
-                    <!-- Классный проект с использованием TypeScript, ViteJS, EventBust для
-                управления событиями, WebSocket для обмена сообщениями. Плюс за
-                кастомный роутинг на TypeScript и тестирование с помощью Chai и
-                Mocha. -->
-                  </p>
+                  </в>
                   <div class="projects__tags">
                     <?php 
               $tags_string = get_field('project_tags');
