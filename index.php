@@ -205,7 +205,19 @@
               ?>
               <li class="projects__item">
                 <article class="projects__project">
-                  <img class="projects__img" src="<?php echo the_field('project_img'); ?>" />
+                  <?php
+                  $img = get_field('project_img');
+                  $video = get_field('project_video');
+                  if ($video):
+                    ?>
+                     <video class="projects__img" playsinline loop muted autoplay preload="auto">
+        <source src="<?php echo esc_url($video); ?>" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+    <?php elseif ($img): ?>
+    <img class="projects__img" src="<?php echo esc_url($img); ?>" alt="">
+<?php endif; ?>
+                 
                   <p class="projects__name">
                     <?php the_title() ?>
                   </p>
