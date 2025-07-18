@@ -85,20 +85,20 @@
           </button>
 
           <nav class="header__nav">
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="#projects" class="header__button">Работы</a>
-              </li>
-              <li class="header__item">
-                <a href="#skills" class="header__button">Навыки</a>
-              </li>
-              <li class="header__item">
-                <a href="#tools" class="header__button">Технологии</a>
-              </li>
-              <li class="header__item">
-                <a href="#contacts" class="header__button">Контакты</a>
-              </li>
-            </ul>
+          <ul class="header__list">
+        <li class="header__item">
+          <a data-scroll-to="projects" class="header__button">Работы</a>
+        </li>
+        <li class="header__item">
+          <a data-scroll-to="skills" class="header__button">Навыки</a>
+        </li>
+        <li class="header__item">
+          <a data-scroll-to="tools" class="header__button">Технологии</a>
+        </li>
+        <li class="header__item">
+          <a data-scroll-to="contacts" class="header__button">Контакты</a>
+        </li>
+      </ul>
           </nav>
 
           <div class="header__actions">
@@ -148,7 +148,7 @@
 
           <div class="hero__actions">
             <div class="hero__btnWrapper">
-              <a href="#footer" class="hero__btnScroll"></a>
+            <a data-scroll-to="footer" class="hero__btnScroll"></a>
               <span class="hero__btnScrollText"> SCROLL TO DOWN </span>
             </div>
 
@@ -448,7 +448,7 @@
               </a>
               <a href="https://github.com/Andrew213" target="_blank" class="contacts__item contacts__item-git">
                 <div class="contacts__img hero__socialItem hero__socialItem">
-                  <div rel="stylesheet" href="#" target="_blank" class="hero__socialLink hero__socialLink_git"></div>
+                  <div class="hero__socialLink hero__socialLink_git"></div>
                 </div>
                 <span class="contacts__name">GitHub</span>
               </a>
@@ -470,7 +470,7 @@
             <a href="https://github.com/Andrew213" target="_blank"
               class="contacts__item contacts__item-sm contacts__item-git">
               <div class="contacts__img hero__socialItem hero__socialItem">
-                <div rel="stylesheet" href="#" target="_blank" class="hero__socialLink hero__socialLink_git"></div>
+                <div class="hero__socialLink hero__socialLink_git"></div>
               </div>
               <span class="contacts__name">GitHub</span>
             </a>
@@ -511,7 +511,7 @@
             <input type="checkbox" id="themeSwitch2" name="theme-switch2" class="theme-switch2__input footer__theme" />
             <label for="themeSwitch2" class="theme-switch2__label footer__themeLabel"><span
                 class="theme-switch2__span"></span></label>
-            <a href="#hero" class="hero__btnScroll footer__btnScroll"></a>
+                <a data-scroll-to="hero" class="hero__btnScroll footer__btnScroll"></a>
           </div>
         </div>
         <div class="footer__top-sm">
