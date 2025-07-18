@@ -180,9 +180,9 @@
       <svg class="testSvg">
         <path id="dynamicCurve-js" fill="none" stroke-width=" 2" />
       </svg>
-      <section class="projects" id="projects" data-scroll data-scroll-speed="2">
+      <section class="projects hidden" id="projects"  data-scroll-class="fade-in" data-scroll >
         <div class="projects__inner inner ">
-          <h2 class="title projects__title" id="projects">Проекты</h2>
+          <h2 class="title projects__title">Проекты</h2>
           <div class="projects_listContainer">
             <div class="swiper-pagination"></div>
 
@@ -276,7 +276,7 @@
       <svg class="testSvg">
         <path id="dynamicCurve-react" fill="none" stroke-width="2" />
       </svg>
-      <section class="skills" id="skills" data-scroll data-scroll-speed="3">
+      <section class="skills" id="skills hidden" data-scroll data-scroll-class="fade-in">
         <div class="skills__inner inner container">
           <h2 class="title skills__title">Навыки</h2>
           <div class="skills__wrapper">
@@ -392,7 +392,7 @@
         <path id="dynamicCurve-html" fill="none" stroke-width="2" />
       </svg>
 
-      <section class="tools" id="tools" data-scroll data-scroll-speed="4">
+      <section class="tools hidden" id="tools" data-scroll data-scroll-class="fade-in">
         <div class="tools__inner inner container">
           <h2 class="title tools__title">Технологии</h2>
           <ul class="tools__list">
@@ -423,7 +423,7 @@
           </ul>
         </div>
       </section>
-      <section class="contacts" id="contacts" id="tools" data-scroll data-scroll-speed="5">
+      <section class="contacts hidden" id="contacts" data-scroll data-scroll-class="fade-in">
         <div class="contacts__inner inner container">
           <h2 class="title contacts__title">Контакты</h2>
 
