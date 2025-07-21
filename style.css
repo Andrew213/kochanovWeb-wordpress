@@ -977,7 +977,9 @@ div {
     height: 700px !important;
   }
   .projects__img {
-    max-width: 100%;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
   }
   .projects__btn {
     display: none;
