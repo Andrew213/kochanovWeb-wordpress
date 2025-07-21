@@ -1375,9 +1375,17 @@ div {
   .footer__item-sm {
     flex-basis: 100%;
   }
-  .footer__button-sm,
-  .footer__mail {
+  .footer__button-sm {
     width: 100% !important;
+    padding: 20px 10px;
+    font-family: Comfortaa-SemiBold, sans-serif;
+    font-size: 20px;
+  }
+
+  .footer__mail {
+    width: 100%;
+    display: block;
+    max-width: 100%;
     padding: 20px 10px;
     font-family: Comfortaa-SemiBold, sans-serif;
     font-size: 20px;

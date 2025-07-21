@@ -423,66 +423,66 @@
           </ul>
         </div>
       </section>
-      <section class="contacts hidden" id="contacts" data-scroll data-scroll-class="fade-in">
-        <div class="contacts__inner inner container">
-          <h2 class="title contacts__title">Контакты</h2>
+      <section class="contacts hidden" id="contacts"  data-scroll data-scroll-class="fade-in">
+  <div class="contacts__inner inner container">
+    <h2 class="title contacts__title">Контакты</h2>
 
-          <div class="contacts__list">
-            <div class="contacts__item contacts__item-mail">
-              <div class="contacts__item-mailTop">
-                <p class="contacts__addres">a.kochanov31@yandex.ru</p>
-                <div class="contacts__copy">
-                  <button class="contacts__copyBtn">
-                  </button>
-                </div>
-              </div>
-              <a href="mailto:a.kochanov31@yandex.ru" class="button contacts__mail">Связаться</a>
-            </div>
-
-            <div class="contacts__tgInstWrapper">
-              <a target="_blank" href="https://t.me/andreikochanov" class="contacts__item contacts__item-tg">
-                <div class="contacts__img hero__socialItem hero__socialItem">
-                  <div class="hero__socialLink hero__socialLink_tg"></div>
-                </div>
-                <span class="contacts__name">Telegram</span>
-              </a>
-              <a href="https://github.com/Andrew213" target="_blank" class="contacts__item contacts__item-git">
-                <div class="contacts__img hero__socialItem hero__socialItem">
-                  <div class="hero__socialLink hero__socialLink_git"></div>
-                </div>
-                <span class="contacts__name">GitHub</span>
-              </a>
-              <a target="_blank" href="https://instagram.com/ludovikxlv?igshid=ZDdkNTZiNTM="
-                class="contacts__item contacts__item-inst">
-                <div class="contacts__img hero__socialItem hero__socialItem">
-                  <div class="hero__socialLink hero__socialLink_inst"></div>
-                </div>
-                <span class="contacts__name">Instagram</span>
-              </a>
-            </div>
-            <a target="_blank" href="https://t.me/andreikochanov"
-              class="contacts__item contacts__item-sm contacts__item-inst">
-              <div class="contacts__img hero__socialItem hero__socialItem">
-                <div class="hero__socialLink hero__socialLink_tg"></div>
-              </div>
-              <span class="contacts__name">Telegram</span>
-            </a>
-            <a href="https://github.com/Andrew213" target="_blank"
-              class="contacts__item contacts__item-sm contacts__item-git">
-              <div class="contacts__img hero__socialItem hero__socialItem">
-                <div class="hero__socialLink hero__socialLink_git"></div>
-              </div>
-              <span class="contacts__name">GitHub</span>
-            </a>
-            <a href="https://instagram.com/ludovikxlv?igshid=ZDdkNTZiNTM=" target="_blank"
-              class="contacts__item contacts__item-sm contacts__item-inst">
-              <div class="contacts__img hero__socialItem hero__socialItem">
-                <div rel="stylesheet" class="hero__socialLink hero__socialLink_inst"></div>
-              </div>
-              <span class="contacts__name">Instagram</span>
-            </a>
+    <div class="contacts__list">
+      <div class="contacts__item contacts__item-mail">
+        <div class="contacts__item-mailTop">
+          <p class="contacts__addres">a.kochanov31@gmail.com</p>
+          <div class="contacts__copy">
+            <button class="contacts__copyBtn">
+            </button>
           </div>
-      </section>
+        </div>
+        <a href="mailto:a.kochanov31@gmail.com" class="button contacts__mail">Связаться</a>
+      </div>
+
+      <div class="contacts__tgInstWrapper">
+        <a target="_blank" href="https://t.me/andreikochanov" class="contacts__item contacts__item-tg">
+          <div class="contacts__img hero__socialItem hero__socialItem">
+            <div class="hero__socialLink hero__socialLink_tg"></div>
+          </div>
+          <span class="contacts__name">Telegram</span>
+        </a>
+        <a href="https://github.com/Andrew213" target="_blank" class="contacts__item contacts__item-git">
+          <div class="contacts__img hero__socialItem hero__socialItem">
+            <div rel="stylesheet" href="#" target="_blank" class="hero__socialLink hero__socialLink_git"></div>
+          </div>
+          <span class="contacts__name">GitHub</span>
+        </a>
+        <a target="_blank" href="https://instagram.com/ludovikxlv?igshid=ZDdkNTZiNTM="
+          class="contacts__item contacts__item-inst">
+          <div class="contacts__img hero__socialItem hero__socialItem">
+            <div class="hero__socialLink hero__socialLink_inst"></div>
+          </div>
+          <span class="contacts__name">Instagram</span>
+        </a>
+      </div>
+      <a target="_blank" href="https://t.me/andreikochanov"
+        class="contacts__item contacts__item-sm contacts__item-inst">
+        <div class="contacts__img hero__socialItem hero__socialItem">
+          <div class="hero__socialLink hero__socialLink_tg"></div>
+        </div>
+        <span class="contacts__name">Telegram</span>
+      </a>
+      <a href="https://github.com/Andrew213" target="_blank"
+        class="contacts__item contacts__item-sm contacts__item-git">
+        <div class="contacts__img hero__socialItem hero__socialItem">
+          <div rel="stylesheet" href="#" target="_blank" class="hero__socialLink hero__socialLink_git"></div>
+        </div>
+        <span class="contacts__name">GitHub</span>
+      </a>
+      <a href="https://instagram.com/ludovikxlv?igshid=ZDdkNTZiNTM=" target="_blank"
+        class="contacts__item contacts__item-sm contacts__item-inst">
+        <div class="contacts__img hero__socialItem hero__socialItem">
+          <div rel="stylesheet" class="hero__socialLink hero__socialLink_inst"></div>
+        </div>
+        <span class="contacts__name">Instagram</span>
+      </a>
+    </div>
+</section>
     </main>
     <footer class="footer" id="footer" data-scroll-section>
       <div class="container inner footer__container">
@@ -491,55 +491,108 @@
           <nav class="footer__nav">
             <ul class="footer__list">
               <li class="footer__item">
-                <a data-scroll-to="hero" style="display: block" class="footer__button footer_link">Обо мне</a>
+                <a
+                  data-scroll-to="hero"
+                  style="display: block"
+                  class="footer__button footer_link"
+                  >Обо мне</a
+                >
               </li>
               <li class="footer__item">
-                <a data-scroll-to="projects" style="display: block" class="footer__button footer_link">Работы</a>
+                <a
+                  data-scroll-to="projects"
+                  style="display: block"
+                  class="footer__button footer_link"
+                  >Работы</a
+                >
               </li>
               <li class="footer__item">
-                <a data-scroll-to="skills" style="display: block" class="footer__button footer_link">Навыки</a>
+                <a
+                  data-scroll-to="skills"
+                  style="display: block"
+                  class="footer__button footer_link"
+                  >Навыки</a
+                >
               </li>
               <li class="footer__item">
-                <a data-scroll-to="tools" style="display: block" class="footer__button footer_link">Технологии</a>
+                <a
+                  data-scroll-to="tools"
+                  style="display: block"
+                  class="footer__button footer_link"
+                  >Технологии</a
+                >
               </li>
               <li class="footer__item">
-                <a data-scroll-to="contacts" style="display: block" class="footer__button footer_link">Контакты</a>
+                <a
+                  data-scroll-to="contacts"
+                  style="display: block"
+                  class="footer__button footer_link"
+                  >Контакты</a
+                >
               </li>
             </ul>
           </nav>
           <div class="footer__actions">
-            <input type="checkbox" id="themeSwitch2" name="theme-switch2" class="theme-switch2__input footer__theme" />
-            <label for="themeSwitch2" class="theme-switch2__label footer__themeLabel"><span
-                class="theme-switch2__span"></span></label>
-                <a data-scroll-to="hero" class="hero__btnScroll footer__btnScroll"></a>
+            <input
+              type="checkbox"
+              id="themeSwitch2"
+              name="theme-switch2"
+              class="theme-switch2__input footer__theme"
+            />
+            <label
+              for="themeSwitch2"
+              class="theme-switch2__label footer__themeLabel"
+              ><span class="theme-switch2__span"></span
+            ></label>
+            <a data-scroll-to="hero" class="hero__btnScroll footer__btnScroll"></a>
           </div>
         </div>
         <div class="footer__top-sm">
           <nav class="footer__nav-sm">
             <ul class="footer__list-sm">
               <li class="footer__item-sm">
-                <a data-scroll-to="hero" class="footer__button-sm footer_link">Обо мне</a>
+                <a data-scroll-to="hero" class="footer__button-sm footer_link"
+                  >Обо мне</a
+                >
               </li>
               <li class="footer__item-sm">
-                <a data-scroll-to="projects" class="footer__button-sm footer_link">Работы</a>
+                <a data-scroll-to="projects" class="footer__button-sm footer_link"
+                  >Работы</a
+                >
               </li>
               <li class="footer__item-sm">
-                <a data-scroll-to="skills" class="footer__button-sm footer_link">Навыки</a>
+                <a data-scroll-to="skills" class="footer__button-sm footer_link"
+                  >Навыки</a
+                >
               </li>
               <li class="footer__item-sm">
-                <a data-scroll-to="tools" class="footer__button-sm footer_link">Технологии</a>
+                <a data-scroll-to="tools" class="footer__button-sm footer_link"
+                  >Технологии</a
+                >
               </li>
               <li class="footer__item-sm">
-                <a data-scroll-to="contacts" class="footer__button-sm footer_link">Контакты</a>
+                <a data-scroll-to="contacts" class="footer__button-sm footer_link"
+                  >Контакты</a
+                >
               </li>
               <li class="footer__item-sm">
-                <a href="mailto:a.kochanov31@yandex.ru" class="contacts__mail footer__mail footer_link">Связаться</a>
+                <a
+                  href="mailto:a.kochanov31@gmail.com"
+                  class="contacts__mail footer__mail footer_link"
+                  >Связаться</a
+                >
               </li>
             </ul>
           </nav>
         </div>
         <span class="footer__copyright">&copy; Andrey Kochanov</span>
       </div>
+    
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+      />
+      <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     </footer>
   </div>
 
