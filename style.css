@@ -878,8 +878,9 @@ div {
   height: 650px;
 }
 .projects__img {
-  width: 338px;
-  height: 194px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
   border-radius: 24px;
   margin-bottom: 15px;
 }
