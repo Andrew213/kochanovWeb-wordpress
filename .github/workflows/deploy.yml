@@ -18,6 +18,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 158.160.132.6 >> ~/.ssh/known_hosts
+
       - name: Deploy with rsync
         run: |
           rsync -avz --delete \
